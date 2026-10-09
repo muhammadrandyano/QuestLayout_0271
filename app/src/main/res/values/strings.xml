@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">PAM_4</string>
+    <string name="prodi">Teknologi Informasi</string>
+    <string name="univ">Universitas Muhammadiyah Yogyakarta</string>
+    <string name="nama">Muhammad Randyano</string>
+    <string name="alamat">Indonesia, Jambi</string>
+    <string name="copy">Copyright, 2026</string>
+
+
+
 </resources>
