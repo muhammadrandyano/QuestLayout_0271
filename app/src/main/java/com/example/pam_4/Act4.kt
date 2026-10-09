@@ -30,7 +30,7 @@ fun ActivitasPertama(modifier: Modifier) {
         modifier = Modifier.padding(top = 100.dp)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-    ) {
+    ){
         Text(
             stringResource(R.string.prodi),
             fontSize = 35.sp,
@@ -40,4 +40,12 @@ fun ActivitasPertama(modifier: Modifier) {
             stringResource(R.string.univ),
             fontSize = 22.sp
         )
-    }
+        Spacer(modifier = Modifier.height(25.dp))
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(12.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = Color.DarkGray)
+        ) {
+        }
