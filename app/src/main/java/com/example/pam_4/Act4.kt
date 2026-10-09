@@ -1,6 +1,7 @@
 package com.example.pam_4
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -25,54 +26,68 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun ActivitasPertama(modifier: Modifier) {
+fun AktivitasPertama(modifier: Modifier) {
     Column(
-        modifier = Modifier.padding(top = 100.dp)
+        modifier = Modifier
+            .padding(top = 100.dp)
             .fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-    ){
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         Text(
-            stringResource(R.string.prodi),
+            text = stringResource(id = R.string.prodi),
             fontSize = 35.sp,
             fontWeight = FontWeight.Bold
         )
         Text(
-            stringResource(R.string.univ),
+            text = stringResource(id = R.string.univ),
             fontSize = 22.sp
         )
         Spacer(modifier = Modifier.height(25.dp))
         Card(
             modifier = Modifier
-                .fillMaxWidth()
+                .fillMaxWidth(1f)
                 .padding(12.dp),
             colors = CardDefaults.cardColors(
-                containerColor = Color.DarkGray)
-        ){
-            Row() {
-                val gambar = painterResource(R.drawable.logo_umy)
+                containerColor = Color.DarkGray
+            )
+        ) {
+            Row {
+                val gambar = painterResource(id = R.drawable.logo_umy)
                 Image(
                     painter = gambar,
                     contentDescription = null,
-                    modifier = Modifier.size(100.dp).padding(5.dp)
+                    modifier = Modifier
+                        .size(100.dp)
+                        .padding(5.dp)
                 )
                 Spacer(modifier = Modifier.width(30.dp))
-                Column() {
+                Column {
                     Text(
-                        stringResource(R.string.nama),
+                        text = stringResource(id = R.string.nama),
                         fontSize = 30.sp,
                         fontFamily = FontFamily.Cursive,
                         color = Color.White,
                         modifier = Modifier.padding(top = 15.dp)
                     )
                     Text(
-                        stringResource(R.string.alamat),
+                        text = stringResource(id = R.string.alamat),
                         fontSize = 20.sp,
                         color = Color.Yellow,
                         modifier = Modifier.padding(top = 10.dp)
                     )
                 }
             }
-
         }
+    }
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+    ) {
+        Text(
+            text = stringResource(id = R.string.copy),
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .padding(bottom = 50.dp)
+        )
     }
 }
