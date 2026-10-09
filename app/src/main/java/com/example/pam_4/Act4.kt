@@ -30,7 +30,7 @@ fun ActivitasPertama(modifier: Modifier) {
         modifier = Modifier.padding(top = 100.dp)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-    ){
+    ) {
         Text(
             stringResource(R.string.prodi),
             fontSize = 35.sp,
@@ -46,8 +46,9 @@ fun ActivitasPertama(modifier: Modifier) {
                 .fillMaxWidth()
                 .padding(12.dp),
             colors = CardDefaults.cardColors(
-                containerColor = Color.DarkGray)
-        ){
+                containerColor = Color.DarkGray
+            )
+        ) {
             Row() {
                 val gambar = painterResource(R.drawable.logo_umy)
                 Image(
@@ -55,4 +56,17 @@ fun ActivitasPertama(modifier: Modifier) {
                     contentDescription = null,
                     modifier = Modifier.size(100.dp).padding(5.dp)
                 )
+                Spacer(modifier = Modifier.width(30.dp))
+                Column() {
+                    Text(
+                        stringResource(R.string.nama),
+                        fontSize = 30.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 15.dp)
+                    )
+                }
             }
+        }
+    }
+}
